@@ -1,5 +1,3 @@
-package image;
-
 public class Animal {
     String name;
     String characteristic;

@@ -1,15 +1,25 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Human.Builder builder = new Human.Builder("Алексей", 35);
+        Human.Sailor sailor = new Human.Sailor("Иван", 40);
+        Human.Pilot pilot = new Human.Pilot("Сергей", 30);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        builder.introduce();
+        builder.buildHouse();
+
+        sailor.introduce();
+        sailor.sail();
+
+        pilot.introduce();
+        pilot.fly();
+
+        Animal.Tiger tiger = new Animal.Tiger();
+        Animal.Crocodile crocodile = new Animal.Crocodile();
+        Animal.Kangaroo kangaroo = new Animal.Kangaroo();
+
+        tiger.describe();
+        crocodile.describe();
+        kangaroo.describe();
+
     }
 }
