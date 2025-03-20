@@ -21,5 +21,21 @@ public class Main {
         crocodile.describe();
         kangaroo.describe();
 
+        Money money = new Money(10, 50, "USD");
+        Product product = new Product("Телефон", money);
+
+        product.displayProduct();
+        product.decreasePrice(2, 30);
+        product.displayProduct();
+
+        Device[] devices = {new Kettle(), new Microwave(), new Car(), new Steamboat()};
+        for (Device device : devices) {
+            device.show();
+            device.sound();
+            device.desc();
+            System.out.println();
+        }
+
+
     }
 }
